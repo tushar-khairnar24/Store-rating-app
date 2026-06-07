@@ -11,6 +11,7 @@ import {
   FaPlus,
   FaSignOutAlt,
 } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const AdminDashboard = () => {
   const [userName, setUserName] = useState("");
@@ -426,7 +427,7 @@ const AdminDashboard = () => {
             onChange={(e) => setNewUser({ ...newUser, password: e.target.value })}
           />
           <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>
-            {showPassword ? "🙈" : "👁️"}
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
         <div className="input-group">
@@ -442,7 +443,7 @@ const AdminDashboard = () => {
             className="eye-icon"
             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
           >
-            {showConfirmPassword ? "🙈" : "👁️"}
+            {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
         <input
