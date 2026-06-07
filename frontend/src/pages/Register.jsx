@@ -190,7 +190,7 @@ const Register = () => {
           className="eye-icon"
           onClick={() => setShowConfirmPassword(!showConfirmPassword)}
         >
-          {showPassword ? <FaEyeSlash /> : <FaEye />}
+          {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
         </span>
       </div>
 
