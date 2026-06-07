@@ -100,8 +100,8 @@ const AdminDashboard = () => {
       setUserError("Fill all user fields");
       return;
     }
-    if (name.length < 20 || name.length > 60) {
-      setUserError("User name must be between 20 and 60 characters");
+    if (name.length < 2 || name.length > 60) {
+      setUserError("User name must be between 2 and 60 characters");
       return;
     }
     if (address.length > 400) {
