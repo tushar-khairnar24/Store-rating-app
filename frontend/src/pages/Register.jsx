@@ -3,6 +3,7 @@ import api from "../api/axiosConfig";
 import "../css/Register.css";
 import { Link } from "react-router-dom";
 import { FaInfoCircle } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -166,7 +167,7 @@ const Register = () => {
           onChange={handleChange}
         />
         <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>
-          {showPassword ? "🙈" : "👁️"}
+          {showPassword ? <FaEyeSlash /> : <FaEye />}
         </span>
         <FaInfoCircle className="info-icon" onClick={() => toggleInfo("password")} />
         {infoVisible.password && (
